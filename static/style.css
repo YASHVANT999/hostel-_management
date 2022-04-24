@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: url("img/1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: cursive;
+  text-transform: capitalize;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
+.choice {
+  font-size: 30px;
+  border: none;
+  text-transform: capitalize;
+  color: grey;
+  margin: 10px;
+  padding: 10px;
+  padding-left: 40px;
+  background: lightblue;
+  border-radius: 3px;
+  width: 400px;
+  font-weight: 500;
+  box-shadow: 0 3px 7px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content-box {
+  margin-top: 50px;
+  width: 40%;
+  background: linear-gradient(to bottom right, #e3f0ff, #fafcff);
+  padding: 3rem;
+  box-shadow: 5px 5px 5px #191919;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.student img {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+.admin img {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+.info {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: cursive;
+  font-size: 20px;
+  background-color: rgb(122, 181, 178);
+  border-radius: 3px;
+  width: 90px;
+  margin-top: 20px;
+  box-shadow: 3px 3px 3px #191919;
+}
+
+.comp {
+  position: fixed;
+  top: 61.2%;
+  left: 50%;
+  width: 70%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom right, #e3f0ff, #fafcff);
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 9;
+  border-radius: 10px;
+}
+.close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  font-size: 3.5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.head {
+  text-align: center;
+  background-color: lightcoral;
+  font-size: 40px;
+  margin-left: 36%;
+  margin-right: 30%;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+}
+.container {
+  margin-top: 20px;
+}
+input,
+select {
+  margin-bottom: 13px;
+  border-radius: 5px;
+  border-color: lightslategray;
+  height: 30px;
+  width: 400px;
+}
+label {
+  font-size: 15px;
+  text-transform: capitalize;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #555;
+  font-weight: 500;
+  margin-right: 10px;
+  margin-bottom: 13px;
+}
+
+textarea {
+  width: 400px;
+  height: 100px;
+}
+button {
+  background: #ff4f4f;
+  color: #fff;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 15px 40px;
+  display: block;
+  margin-left: 60px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}

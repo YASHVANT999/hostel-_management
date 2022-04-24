@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">hostel complaint portal</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="http://gecazamgarh.ac.in/Vision.aspx">About</a></li>
+      </ul>
+    </nav>
+    <center><div class="choice">choose your profile</div></center>
+    <center>
+      <div class="content-box">
+        <div class="student">
+          <img onclick="popup()" src="/static/img/student (1).png" />
+          <div class="info">student</div>
+        </div>
+        <div class="admin">
+          <a href="loginportal"><img src="/static/img/admin.png" /></a>
+          <div class="info">admin</div>
+        </div>
+      </div>
+    </center>
+    <div class="comp hide">
+      <button class="close-modal" id="cart-close">&times;</button>
+      <div class="head">complaint form</div>
+      <center>
+        <div class="container">
+          <form
+            action="https://sheetdb.io/api/v1/pgm5gnf1cptwx"
+            method="POST"
+            id="sheetdb-form"
+          >
+            <p>
+              <label>first name </label>
+              <input
+                type="text"
+                name="data[Firstname]"
+                placeholder="Enter First name"
+                required
+              />
+            </p>
+            <p>
+              <label>last name </label>
+              <input
+                type="text"
+                name="data[Lastname]"
+                placeholder="Enter Last name"
+                required
+              />
+            </p>
+            <p>
+              <label style="margin-left: 48px">year</label>
+              <select name="data[year]">
+                <option>1 year</option>
+                <option>2 year</option>
+                <option>3 year</option>
+                <option>4 year</option>
+              </select>
+            </p>
+            <p>
+              <label style="margin-left: 32px">branch</label>
+              <select name="data[Branch]">
+                <option>Information Technology</option>
+                <option>Machenical Engineering</option>
+                <option>Civil Engineering</option>
+              </select>
+            </p>
+            <p>
+              <label style="margin-left: -12px">reg. number </label>
+              <input
+                type="text"
+                name="data[Registration]"
+                placeholder="Enter reg. number"
+                required
+              />
+            </p>
+            <p>
+              <label style="margin-left: -10px">roll number </label>
+              <input
+                type="text"
+                name="data[rollnumber]"
+                placeholder="Enter roll number"
+                required
+              />
+            </p>
+            <p>
+              <label style="margin-left: -8px">hostel name</label>
+              <select name="data[hostelname]">
+                <option>Vishveshwarya</option>
+                <option>Ramanujan</option>
+                <option>Kalpana chawla</option>
+              </select>
+            </p>
+            <p>
+              <label style="margin-left: 20px">message</label>
+              <textarea name="data[message]" placeholder="type your message here"></textarea>
+              <div class="submit"><button type="submit" class="form-submit-btn">submit</button></div>
+            </p>
+          </form>
+        </div>
+      </center>
+    </div>
+  </body>
+  <script src="/static/app.js">
+  </script>
+  <!-- <script src="https://sheetdb.io/s/t/h5dml9c9s4mht.js"></script> -->
+</html>
