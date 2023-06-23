@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u1$ztq9apn35-s_t9b%m6qebbbpk$50(qiy=@*os$ug(9w2f&8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.app.vercel', '127.0.0.1']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'first.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR,"tamplates"],
+        'DIRS': [BASE_DIR, "tamplates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,4 +124,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-STATICFILES_DIRS=[BASE_DIR,"static"]
+STATICFILES_DIRS = [BASE_DIR, "static"]
